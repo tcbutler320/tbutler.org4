@@ -1,0 +1,210 @@
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/32a2b2a489.js" crossorigin="anonymous"></script>
+  <link href="http://fonts.cdnfonts.com/css/handwritten" rel="stylesheet">
+
+</head>
+<style>
+
+body {
+  font-family: 'Lucida Grande', helvetica, arial, verdana, sans-serif;
+  background-color: #F5F5F5;
+}
+
+
+/* Tablet and above */
+@media only screen and (min-device-width: 768px){
+  
+  .bd {
+  /* border: 1px dashed black; */
+}
+.flex-container {
+  display: flex;
+  padding-right: 10px;
+}
+.flex-item-1 {
+  flex: 1;
+  /* display: none; */
+  /* border-bottom: 1px solid black; */
+  padding: 10px;
+}
+.flex-item-2 {
+  flex: 3;
+  padding-left: 15px;
+  padding-right: 85px;
+  /* border-left: 1px solid black; */
+  /* border-top: 1px solid black; */
+
+}
+.flex-item-3 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+a {
+  color:black;
+}
+
+.muted {
+  opacity: 40%;
+  font-size: 12px;
+}
+
+.mp-0 {
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+}
+
+
+/* mobile and below */
+@media only screen and (max-device-width: 480px) {
+  .bd {
+  /* border: 1px dashed black; */
+}
+.flex-container {
+  display: flex;
+  padding-right: 10px;
+}
+.flex-item-1 {
+  flex: 1;
+  display: none;
+  /* display: none; */
+  /* border-bottom: 1px solid black; */
+  padding: 10px;
+}
+.flex-item-2 {
+  flex: 3;
+  padding-left: 15px;
+  border-left: 1px solid black;
+  /* border-bottom: 1px solid black;  */
+
+}
+.flex-item-3 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+a {
+  color:black;
+}
+
+.muted {
+  opacity: 40%;
+}
+
+.mp-0 {
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+  
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px red solid;
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+}
+
+#expand-sidebar {
+  display: none;
+}
+
+</style>
+<body>
+  <div class="flex-container">
+    <div class="flex-item-1 bd" id="sidebar1">
+      <p>
+        <i class="fas fa-compress-alt fa-pull-right zoom" onclick="document.getElementById('sidebar2').style.display = 'none';document.getElementById('sidebar1').style.display = 'none';document.getElementById('expand-sidebar').style.display = 'block'"></i>
+        <a href="">/home</a>  <a href="">/blog</a>  <a href=""><b>/CVE-2021-35956</b></a>  
+      </p>
+      <!-- <i class="fab fa-twitter"></i> -->
+    </div>
+    <div class="flex-item-2">
+      <p>
+        <h2 class="mp-0">
+          <i id="expand-sidebar" class="expand-sidebar fas fa-expand-alt fa-pull-left zoom" onclick="document.getElementById('sidebar2').style.display = 'flex';document.getElementById('sidebar1').style.display = 'flex';document.getElementById('expand-sidebar').style.display = 'none'"></i>
+          <a href="">CVE-2021-35956 akcp sensorprobe - 'multiple' cross site scripting (xss)</a>
+        </h2>
+        <!-- <i class="fas fa-user-circle"></i> -->
+        <!-- <img class="avatar" src="/Users/tylerbutler/Documents/avatar.jpg"><i>  -->
+        By: <a href="">tyler butler</a>, august 12 '21</i> 
+        | <span class="muted"><i class="fab fa-twitter"></i> <i class="fab fa-facebook"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-reddit-alien"></i></span>
+        <br>
+        <br>
+        <small>
+          <i>
+            <i class="fas fa-quote-left fa-pull-left" style="font-size: 10px;"></i>
+            This is a short description about this write-up. It includes a couple sentences that might also serve as the post lead for social media posts and other uses. Lets see what happens when this is a little long.
+          </i>
+        </small>
+
+        <!-- <br> -->
+        <!-- <span class="muted">share <i class="fab fa-twitter-square"></i> <i class="fab fa-facebook-square"></i> <i class="fab fa-reddit-square"></i></span> -->
+      </p>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item-1 bd" id="sidebar2">
+      <p>
+        on this page 
+        <br>
+        <a href="#overview">#overview</a>
+        <br>
+        <a href="#details">#details</a>
+        <br>
+        <a href="#notes">#notes</a>
+      </p>
+    </div>
+    <div class="flex-item-2 bd">
+      <p>
+        <h3 id="overview"># overview <span class="muted"><i class="zoom fas fa-link"></i></span></h3> 
+        This week, I was incredibly fortunate to finally get my first CVE vulnerability assigned by Mitre 🎉 ! CVE-2021-35956 details multiple stored cross-site scripting (XSS) vulnerabilities I discovered in the AKCP sensorProbe embedded webserver. In this post, I’ll describe the technical details of the vulnerability, the vendor’s response, and remediation options. Overall AKCP was an exceptional partner in the responsible disclosure process, remediating the issue quickly and providing me with a test unit to verify the updated firmware.
+        <br>
+        <br>
+        Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Dignissim diam quis enim lobortis. Sagittis vitae et leo duis ut. Venenatis cras sed felis eget velit aliquet sagittis. Diam sollicitudin tempor id eu nisl nunc. Molestie nunc non blandit massa enim nec dui nunc mattis. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Est ante in nibh mauris. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Arcu non sodales neque sodales. Purus sit amet luctus venenatis lectus magna fringilla urna. Mauris ultrices eros in cursus. Etiam non quam lacus suspendisse faucibus interdum. Mauris rhoncus aenean vel elit scelerisque mauris. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Egestas dui id ornare arcu. Tristique nulla aliquet enim tortor at.
+        <br>
+        <br>
+        <h3 id="details"># details <span class="muted"><i class="zoom fas fa-link"></i></span></h3>
+        Nec ullamcorper sit amet risus nullam eget felis. Ultrices sagittis orci a scelerisque purus semper eget duis. Mauris augue neque gravida in fermentum et. Felis bibendum ut tristique et. At quis risus sed vulputate odio. Purus gravida quis blandit turpis cursus in hac. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Consectetur adipiscing elit ut aliquam purus sit. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Pellentesque id nibh tortor id aliquet lectus proin nibh. Augue interdum velit euismod in pellentesque massa. Tellus elementum sagittis vitae et leo duis ut. Amet consectetur adipiscing elit pellentesque habitant morbi. Pretium fusce id velit ut tortor pretium viverra suspendisse. Tellus orci ac auctor augue. Elementum facilisis leo vel fringilla. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Volutpat commodo sed egestas egestas fringilla phasellus faucibus.
+        <br>
+        <br>
+        Morbi tristique senectus et netus et malesuada fames ac turpis. Eu consequat ac felis donec et odio pellentesque. Semper viverra nam libero justo laoreet sit amet cursus. Tortor vitae purus faucibus ornare suspendisse. Malesuada nunc vel risus commodo viverra maecenas accumsan. Eu lobortis elementum nibh tellus molestie. Turpis massa tincidunt dui ut ornare lectus sit amet est. Ultricies leo integer malesuada nunc vel risus commodo viverra. Nulla porttitor massa id neque aliquam vestibulum. Diam vulputate ut pharetra sit amet aliquam id. Diam maecenas ultricies mi eget. Rhoncus est pellentesque elit ullamcorper. Malesuada nunc vel risus commodo viverra maecenas.
+        <br>
+        <br>
+        <h3 id="notes"># researcher notes <span class="muted"><i class="zoom fas fa-link"></i></span></h3> 
+        Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Pulvinar etiam non quam lacus. Mauris a diam maecenas sed enim ut sem. Mauris a diam maecenas sed enim ut sem viverra. Sed arcu non odio euismod lacinia. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Eu sem integer vitae justo eget magna. Neque sodales ut etiam sit amet nisl purus. Ut enim blandit volutpat maecenas volutpat. Aliquet sagittis id consectetur purus ut faucibus. Risus sed vulputate odio ut enim blandit volutpat maecenas. Urna et pharetra pharetra massa massa ultricies. Elementum nibh tellus molestie nunc non blandit massa. Ut lectus arcu bibendum at varius vel. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Eu augue ut lectus arcu bibendum. Est sit amet facilisis magna etiam tempor orci eu. Eu facilisis sed odio morbi quis. Malesuada proin libero nunc consequat interdum varius sit.
+      </p>
+    </div>
+  </div>
+
+
+  <script src="https://utteranc.es/client.js"
+        repo="https://github.com/tcbutler320/run.thieves.run"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

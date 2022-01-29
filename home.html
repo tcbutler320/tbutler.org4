@@ -1,0 +1,205 @@
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/32a2b2a489.js" crossorigin="anonymous"></script>
+  <link href="http://fonts.cdnfonts.com/css/handwritten" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/nosifer" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/bad-mofo" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/cartoon-madness" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/salter" rel="stylesheet">
+
+
+                
+
+</head>
+<style>
+
+body {
+  font-family: 'Lucida Grande', helvetica, arial, verdana, sans-serif;
+  background-color: #F5F5F5;
+  padding: 0;
+  overflow: hidden;
+}
+
+.break {
+  font-family: 'Nosifer', sans-serif;
+
+}
+
+.break:hover {
+  transform: scale(1.55); 
+}
+
+.build {
+  font-family: 'Bad Mofo', sans-serif;
+}
+
+.build:hover {
+  transform: scale(1.55); 
+}
+
+.write {
+  font-family: 'Cartoon Madness', sans-serif;
+}
+
+
+.write:hover {
+  transform: scale(1.55); 
+  color:red;
+}
+
+.research {
+  font-family: 'Salter', sans-serif;
+}
+.research:hover {
+  transform: scale(1.55); 
+}
+
+/* Tablet and above */
+@media only screen and (min-device-width: 768px){
+  
+  .bd {
+  /* border: 1px dashed black; */
+}
+.flex-container {
+  display: flex;
+  height: 50%;
+  border: 1px black solid;
+
+}
+.flex-item-1 {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  
+
+}
+
+.flex-item-1:hover {
+  /* background-color: red; */
+}
+
+.flex-item-2:hover {
+  /* background-color: red;   */
+}
+
+.flex-item-2 {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+
+}
+
+.flex-item-3 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+a {
+  color:black;
+}
+
+.muted {
+  opacity: 40%;
+  font-size: 12px;
+}
+
+.mp-0 {
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+}
+
+
+/* mobile and below */
+@media only screen and (max-device-width: 490px) {
+  .bd {
+  /* border: 1px dashed black; */
+}
+.flex-container {
+  display: flex;
+  padding-right: 10px;
+}
+.flex-item-1 {
+  flex: 1;
+  display: none;
+  /* display: none; */
+  /* border-bottom: 1px solid black; */
+  padding: 10px;
+}
+.flex-item-2 {
+  flex: 3;
+  padding-left: 15px;
+  border-left: 1px solid black;
+  /* border-bottom: 1px solid black;  */
+
+}
+.flex-item-3 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+a {
+  color:black;
+}
+
+.muted {
+  opacity: 40%;
+}
+
+.mp-0 {
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+}
+  
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px red solid;
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+}
+
+</style>
+<body>
+  <!-- First Box -->
+  <div class="flex-container">
+    <div class="flex-item-1 bd" id="sidebar1" style="background-color: #FFF8F3;">
+      <h1 class="build" style="font-size: 120px;">Build</h1>
+    </div>
+    <div class="flex-item-1 bd" id="sidebar1" style="background-color: #A3E4DB;">
+      <h1 class="break" style="font-size: 90px;">Break</h1>
+    </div>
+  </div>
+   <!-- Second Box -->
+   <div class="flex-container">
+    <div class="flex-item-1 bd" id="sidebar1" style="background-color: #FED1EF;">
+      <h1 class="research" style="font-size: 90px;">Research</h1>
+    </div>
+    <div class="flex-item-2" style="background-color: #1C6DD0;">
+      <h1 class="write" style="font-size: 90px;" onclick="window.location='blog.html'";>Write</h1>
+    </div>
+  </div>
+</body>
+</html>
